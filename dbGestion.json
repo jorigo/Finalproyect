@@ -1,0 +1,116 @@
+{
+  "encuesta": [
+    {
+      "id": "1",
+      "nombre": "Inst Edu Los Rompe Discoteka",
+      "totalrespondido": 11
+    },
+    {
+      "id": "2",
+      "nombre": "Inst Edu Los pollos",
+      "totalrespondido": 13
+    },
+    {
+      "id": "3",
+      "nombre": "Inst Edu Las Americas",
+      "total": " ",
+      "totalrespondido": 10
+    },
+    {
+      "id": "4",
+      "nombre": " Inst Edu El Gimnasio",
+      "total": " ",
+      "totalrespondido": 100
+    },
+    {
+      "id": "5",
+      "nombre": " Inst Edu Seminario San Btura",
+      "total": " "
+    },
+    {
+      "id": "6",
+      "nombre": " las gatitas",
+      "total": " 45"
+    },
+    {
+      "id": "7",
+      "nombre": " los 300",
+      "total": " 23"
+    },
+    {
+      "id": "8",
+      "nombre": " los 50 de joselito",
+      "total": " 9"
+    },
+    {
+      "id": "9",
+      "nombre": " Manantial del saber",
+      "total": " 78"
+    },
+    {
+      "id": "10",
+      "nombre": " Ints Edu Los Vengadores",
+      "total": " 56"
+    },
+    {
+      "id": "11",
+      "nombre": " Inst Edu Los Simios",
+      "total": " ",
+      "totalrespondido": 9
+    },
+    {
+      "id": "11",
+      "nombre": " Inst Edu Los Simios",
+      "total": " "
+    },
+    {
+      "id": "13",
+      "nombre": " Inst Edu La Normal",
+      "total": " 74"
+    }
+  ],
+  "pregunta": [
+    {
+      "id": "1",
+      "argumento": "Sabe ud que es un conputador?",
+      "idencuesta": "1"
+    },
+    {
+      "id": "2",
+      "argumento": "Conoce las difrentes redes sociales? ",
+      "idencuesta": "1"
+    },
+    {
+      "id": "3",
+      "argumento": " Le gusta la materia de Sistemas?",
+      "idencuesta": "2"
+    },
+    {
+      "id": "4",
+      "argumento": "Cada cuanto estudia sistemas ",
+      "idencuesta": "2"
+    }
+  ],
+  "Tipo-Preguntas": [
+    {
+      "id": "1",
+      "tipo": "Conocimiento",
+      "idpregunta": "1"
+    },
+    {
+      "id": "2",
+      "tipo": "Academico",
+      "idpregunta": "2"
+    },
+    {
+      "id": "3",
+      "tipo": "Seguridad",
+      "idpregunta": "2"
+    },
+    {
+      "id": "4",
+      "tipo": "Informacion",
+      "idpregunta": "1"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+
+<div class="container mt-5">
+    <h3>Editar Registro</h3>
+    <form (ngSubmit)="update()">
+      <!-- Campo de ID (solo lectura) -->
+      <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="id" 
+          [value]="item.id" 
+          readonly>
+      </div>
+<!--
+<div class="container mt-5">
+    <h3>Editar Registro</h3>
+    <form (ngSubmit)="update()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input 
+          type="text" class="form-control" id="nombre" [(ngModel)]="item.nombre" name="nombre" required
+          placeholder="Ingrese el nuevo nombre">
+      </div>
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+  </div>
+  -->

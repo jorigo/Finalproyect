@@ -1,0 +1,19 @@
+
+<h1>Listado De Encuestas</h1>
+
+<form>
+    <button class="btn btn-success mb-3" routerLink="add">Nueva Encuesta</button>
+</form>
+
+@for (item of encuestasList; track $index) {
+<ul>
+    <li>{{item.nombre}}
+        <button class="btn btn-primary" routerLink="edit/{{ item.id }}">Editar</button>
+           <button class="btn btn-danger" (click)="deleteEncuestas(string(item.id))">Eliminar</button>
+    </li>
+</ul>
+
+   
+
+}
+
