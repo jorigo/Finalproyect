@@ -1,7 +1,7 @@
 export class EncuestaModel {
-    id: String = " ";
+    id: string = " ";
     nombre: string = " ";
-    total: string = " ";
+    totalrespondido: string = " ";
     
 }
 

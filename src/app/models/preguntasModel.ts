@@ -1,6 +1,6 @@
 export class PreguntasModel {
     id: string = " ";
-    argumentos: string = " ";
+    argumento: string = " ";
     idencuesta: string = " ";   
 
 

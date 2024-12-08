@@ -4,7 +4,7 @@ import { EncuestaModel } from "../../models/encuestaModel";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-encuestas",
@@ -18,7 +18,7 @@ public encuestasList: EncuestaModel [] = [];
 string: any;
 
 
-  constructor(private encuestasService: EncuestasService) {
+  constructor(private encuestasService: EncuestasService, private router: Router) {
   }
   ngOnInit() {
     this.encuestasService.getencuesta().subscribe((res: any) => {
@@ -28,6 +28,13 @@ string: any;
     });
   }
   deleteEncuestas(id: string) {
-    this.encuestasList = this.encuestasList.filter((Encuestas:  EncuestaModel ) => Encuestas.id !== id.toString());
-  }
-}
+    this.encuestasList = this.encuestasList.filter((Encuestas:  EncuestaModel ) => Encuestas.id !== id);
+    this.encuestasService.deleteEncuestas(id).subscribe();
+      }
+
+      back(){
+        this.router.navigate(['/home']);
+      }
+
+  } 
+

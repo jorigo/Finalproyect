@@ -1,40 +1,39 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { PreguntasService } from './../../../services/preguntas.service';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { PreguntasService } from './../../../services/preguntas.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
+  standalone: true,
+  imports: [RouterModule, CommonModule, FormsModule],
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.sass']
-
 })
 export class EditComponent implements OnInit {
-  item: any = { id: null, nombre: '' };
+  item: any = { id: '', argumento: '', idpregunta: '' };
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    @Inject(PreguntasService) private preguntasService: PreguntasService
-  ) {}
+  constructor(private preguntasService: PreguntasService, 
+    private router: Router, 
+    private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-    this.item = this.preguntasService.getById(id) || { id: null, nombre: '' };
-  }
-
-  update(): void {
-    if (this.item.id) {
-      this.preguntasService.update(this.item.id, this.item);
-      alert('Registro actualizado exitosamente.');
-      this.router.navigate(['/encuestas']);
+    ngOnInit(): void {
+      const id = this.route.snapshot.paramMap.get('id')!;
+      this.preguntasService.getById(id).subscribe(data => {
+        this.item = data;
+      });
     }
-  }
-
-  cancel(): void {
-    this.router.navigate(['/encuestas']);
-  }
+  
+    update(): void {
+      this.preguntasService.update(this.item.id, this.item).subscribe(() => {
+        alert('Registro actualizado exitosamente.');
+        this.router.navigate(['/preguntas']);
+      });
+    }
+  
+    back(): void {
+      this.router.navigate(['/preguntas']);
+    }
 }

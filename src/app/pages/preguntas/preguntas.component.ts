@@ -4,7 +4,7 @@ import { PreguntasModel } from "../../models/preguntasModel";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-preguntas",
@@ -18,16 +18,22 @@ public preguntasList: PreguntasModel [] = [];
 string: any;
 
 
-  constructor(private preguntasService: PreguntasService) {
+  constructor(private preguntasService: PreguntasService, private router: Router) {
   }
   ngOnInit() {
-    this.preguntasService.getpregunta().subscribe((res: any) => {
+    this.preguntasService.getpreguntas().subscribe((res: any) => {
       console.log(res);
       this.preguntasList = res;
   
     });
   }
-  deleteEncuestas(id: string) {
-    this.preguntasList = this.preguntasList.filter((Preguntas:  PreguntasModel ) => Preguntas.id !== id.toString());
+  deletePreguntas(id: string) {
+    this.preguntasList = this.preguntasList.filter((Preguntas:  PreguntasModel ) => Preguntas.id !== id);
+    this.preguntasService.deletePreguntas(id).subscribe();
+     
+  }
+
+  back(){
+    this.router.navigate(['/home']);
   }
 }

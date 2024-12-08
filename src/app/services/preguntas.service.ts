@@ -6,24 +6,24 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PreguntasService {
-  private baseUrl = 'http://localhost:3000/preguntas';
+  private baseUrl = 'http://localhost:3000/pregunta';
   constructor(private http: HttpClient) {
     
    }
-    getpregunta() {
-      return this.http.get('http://localhost:3000/');
+    getpreguntas() {
+      return this.http.get('http://localhost:3000/pregunta');
 } 
 //Uso este metodo para mantener la coherencia con el nombre de la tabla en la base de datos
 getById(id: any){
-  return this.http.get(`http://localhost:3000/preguntas/${id}`);
+  return this.http.get(`http://localhost:3000/pregunta/${id}`);
 }
 
-postPreguntas(Encuestas: any){
+postPreguntas(Preguntas: any){
 
-  return this.http.post('http://localhost:3000/preguntas', Encuestas);
+  return this.http.post('http://localhost:3000/pregunta', Preguntas);
 }
 deletePreguntas(id: any){
-  return this.http.delete(`http://localhost:3000/preguntas/${id}`);
+  return this.http.delete(`http://localhost:3000/pregunta/${id}`);
 
 }
 

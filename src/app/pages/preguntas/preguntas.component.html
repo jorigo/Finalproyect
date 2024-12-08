@@ -1,0 +1,22 @@
+<h1>Listado De Preguntas</h1>
+
+<form>
+    <button class="btn btn-success mb-3" routerLink="add">Nueva Pregunta</button>
+</form>
+
+
+    <table class="table table-striped">
+        @for (item of preguntasList; track $index) {
+        {{item.id}} {{item.argumento}}
+        <button class="btn btn-primary" routerLink="edit/{{ item.id }}">Editar</button>
+           <button class="btn btn-danger" (click)="deletePreguntas(item.id)">Borrar</button>
+
+        }
+      </table>
+  
+      <button type="button" class="btn btn-secondary" (click)="back()">Volver al inicio</button>
+    
+
+
+   
+

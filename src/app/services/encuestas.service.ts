@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EncuestasService {
   private baseUrl = 'http://localhost:3000/encuesta';
+  postPreguntas: any;
   constructor(private http: HttpClient) {
     
    }

@@ -5,7 +5,7 @@
   <form (ngSubmit)="update()">
     <!-- Campo de ID (solo lectura) -->
     <div class="mb-3">
-      <label for="id" class="form-label">ID</label>
+      <label for="id" class="form-label">Id</label>
       <input 
         type="text" 
         class="form-control" 
@@ -31,7 +31,7 @@
     <div class="mb-3">
       <label for="totalrespondido" class="form-label">Total Respondido</label>
       <input 
-        type="number" 
+        type="string" 
         class="form-control" 
         id="totalrespondido" 
         [(ngModel)]="item.totalrespondido" 

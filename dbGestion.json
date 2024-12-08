@@ -2,71 +2,23 @@
   "encuesta": [
     {
       "id": "1",
-      "nombre": "Inst Edu Los Rompe Discoteka",
-      "totalrespondido": 11
-    },
-    {
-      "id": "2",
-      "nombre": "Inst Edu Los pollos",
-      "totalrespondido": 13
+      "nombre": "Encuesta Uso del Computador",
+      "totalrespondido": "8963"
     },
     {
       "id": "3",
-      "nombre": "Inst Edu Las Americas",
-      "total": " ",
-      "totalrespondido": 10
+      "nombre": " Encuesta para Inst Edu Las America",
+      "totalrespondido": " 5520"
     },
     {
       "id": "4",
-      "nombre": " Inst Edu El Gimnasio",
-      "total": " ",
-      "totalrespondido": 100
+      "nombre": " Encuesta Inst Edu El Gimnasio",
+      "totalrespondido": " 89"
     },
     {
       "id": "5",
-      "nombre": " Inst Edu Seminario San Btura",
-      "total": " "
-    },
-    {
-      "id": "6",
-      "nombre": " las gatitas",
-      "total": " 45"
-    },
-    {
-      "id": "7",
-      "nombre": " los 300",
-      "total": " 23"
-    },
-    {
-      "id": "8",
-      "nombre": " los 50 de joselito",
-      "total": " 9"
-    },
-    {
-      "id": "9",
-      "nombre": " Manantial del saber",
-      "total": " 78"
-    },
-    {
-      "id": "10",
-      "nombre": " Ints Edu Los Vengadores",
-      "total": " 56"
-    },
-    {
-      "id": "11",
-      "nombre": " Inst Edu Los Simios",
-      "total": " ",
-      "totalrespondido": 9
-    },
-    {
-      "id": "11",
-      "nombre": " Inst Edu Los Simios",
-      "total": " "
-    },
-    {
-      "id": "13",
-      "nombre": " Inst Edu La Normal",
-      "total": " 74"
+      "nombre": " Encuesta Ins Edu Seminario San Btura",
+      "totalrespondido": " 110"
     }
   ],
   "pregunta": [
@@ -89,6 +41,18 @@
       "id": "4",
       "argumento": "Cada cuanto estudia sistemas ",
       "idencuesta": "2"
+    },
+    {
+      "id": "5",
+      "argumentos": " como se siente ser niño",
+      "idencuesta": " ",
+      "argumento": "Sabe que es el internet"
+    },
+    {
+      "id": "6",
+      "argumentos": " es ud feliz",
+      "idencuesta": " ",
+      "argumento": "¿Posee servicio de internet en su casa?"
     }
   ],
   "Tipo-Preguntas": [
