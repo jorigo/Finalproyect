@@ -7,7 +7,7 @@
 
 @for (item of encuestasList; track $index) {
 <ul>
-    <li>{{item.nombre}} {{item.totalrespondido}}
+    <li>{{item.id}} {{item.nombre}} {{item.totalrespondido}}
         <button class="btn btn-primary" routerLink="edit/{{ item.id }}">Editar</button>
            <button class="btn btn-danger" (click)="deleteEncuestas(item.id)">Borrar</button>
     </li>
