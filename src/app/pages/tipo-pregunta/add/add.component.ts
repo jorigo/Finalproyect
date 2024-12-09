@@ -51,6 +51,11 @@ export class AddComponent implements OnInit {
       this.nextId = String(maxId + 1);
   
       this.newtipo.id = this.nextId;
+
+
+      alert('Registro Guardado.');
+      this.router.navigate(['/tipo-pregunta']);
+
     });
   }
   

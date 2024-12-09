@@ -1,18 +1,38 @@
 
 <h1>Listado De Encuestas</h1>
 
-<form>
-    <button class="btn btn-success mb-3" routerLink="add">Nueva Encuesta</button>
-</form>
+<button class="btn btn-success mb-3" routerLink="add">Nueva Encuesta</button>
 
-@for (item of encuestasList; track $index) {
-<ul>
-    <li>{{item.id}} {{item.nombre}} {{item.totalrespondido}}
-        <button class="btn btn-primary" routerLink="edit/{{ item.id }}">Editar</button>
+      <table class="table"> 
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Total_Respondido</th>
+            <th scope="col">Botones Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (item of encuestasList; track $index) {
+          <tr>
+           
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.nombre}}</td>
+                <td>{{item.totalrespondido}}</td>
+                
+           
+                <button class="btn btn-primary" routerLink="edit/{{ item.id }}">Editar</button>
            <button class="btn btn-danger" (click)="deleteEncuestas(item.id)">Borrar</button>
-    </li>
-</ul>
-   
-}
+                    
+            </tr>
+        }
+          <tr>
+        </tbody>
+      </table>
+      
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-warning" (click)="back()">Volver al inicio</button>
+      </div>
 
-      <button type="button" class="btn btn-secondary" (click)="back()">Volver al inicio</button>
+
+  
